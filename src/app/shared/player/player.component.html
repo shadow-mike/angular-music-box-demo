@@ -1,5 +1,17 @@
 <div class="player-container">
-  <i class="fa fa-play-circle fa-4" aria-hidden="true" (click)="audio.play()"></i>
+
+  <!-- 进度条 -->
+  <div class="progress-bar">
+    <!-- <div class="duration-bar" [ngStyle]="{'width.%': (audio.currentTime/audio.duration)*100}"></div> -->
+    <div class="duration-bar" [ngStyle]="{'width.%': mcl}"></div>
+  </div>
+  <!-- 播放按钮 -->
+  <i #audioBtn
+    class="fa audio-btn"
+    [ngClass]="audio.paused ? 'fa-play' : 'fa-pause'"
+    aria-hidden="true"
+    (click)="audio.paused ? audio.play() : audio.pause()">
+  </i>
 </div>
 
 <audio #audio [src]="album.music">

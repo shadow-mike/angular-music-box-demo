@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { SearchBarComponent } from './shared/search-bar/search-bar.component'
+import { MainPageComponent } from './main-page/main-page/main-page.component';
 
 const appRoutes: Routes = [
   {
     path: 'main',
-    component: SearchBarComponent
+    component: MainPageComponent
   },
   {
     path: 'statistics',
@@ -19,7 +19,7 @@ const appRoutes: Routes = [
   },
   {
     path: '**',
-    component: SearchBarComponent
+    component: MainPageComponent
   }
 
 ];

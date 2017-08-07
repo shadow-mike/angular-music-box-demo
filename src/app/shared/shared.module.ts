@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { HttpModule }    from '@angular/http';
 
 import { SearchBarComponent } from './search-bar/search-bar.component'
 
@@ -13,7 +14,9 @@ import { SearchBarComponent } from './search-bar/search-bar.component'
     SearchBarComponent
   ],
   exports: [
-    FormsModule
+    FormsModule,
+    HttpModule,
+    SearchBarComponent,
   ]
 })
 export class SharedModule { }

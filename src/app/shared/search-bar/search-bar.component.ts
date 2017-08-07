@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-search-bar',
+  selector: 'm-search-bar',
   templateUrl: './search-bar.component.html',
   styleUrls: ['./search-bar.component.scss'],
   host: {
@@ -11,7 +11,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class SearchBarComponent implements OnInit {
 
   @Output() onSearched = new EventEmitter<string>();
-  keywords: string = 'ss';
+  keywords: string = '';
 
   constructor() { }
 
@@ -19,7 +19,7 @@ export class SearchBarComponent implements OnInit {
   }
 
   search () {
-    
+    this.onSearched.emit(this.keywords);
   }
 
 }

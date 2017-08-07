@@ -1,7 +1,4 @@
 <div>
   <m-search-bar (onSearched)="searchMusic($event)"></m-search-bar>
-  <div *ngFor="let m of musicData">
-    {{m.name}}-{{m.author}}
-    <img [src]="m.pic" alt="">
-  </div>
+  <m-album-container [albums]="albums"></m-album-container>
 </div>

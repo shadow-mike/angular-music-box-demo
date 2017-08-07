@@ -8,7 +8,7 @@ import { MainPageService } from '../main-page.service'
 })
 export class MainPageComponent implements OnInit {
 
-  musicData: Array<any> = [];
+  albums: Array<any> = [];
 
   constructor(
     private mpService: MainPageService
@@ -20,8 +20,10 @@ export class MainPageComponent implements OnInit {
   searchMusic(keywords: string) {
     this.mpService.getMusic(keywords)
       .then(data => {
-        this.musicData = data.data
+        data && data.code === 200 ?
+          this.albums = data.data : [];
       })
+      .catch((err) => console.log(err));
   }
 
 }

@@ -4,6 +4,7 @@ import { SharedModule } from '../shared/shared.module';
 
 import { MainPageComponent } from './main-page/main-page.component';
 import { MainPageService } from './main-page.service';
+import { AlbumContainerComponent } from './album-container/album-container.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { MainPageService } from './main-page.service';
     SharedModule
   ],
   declarations: [
-    MainPageComponent
+    MainPageComponent,
+    AlbumContainerComponent
   ],
   providers: [
     MainPageService

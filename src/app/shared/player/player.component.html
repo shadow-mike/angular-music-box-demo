@@ -1,0 +1,7 @@
+<div class="player-container">
+  <i class="fa fa-play-circle fa-4" aria-hidden="true" (click)="audio.play()"></i>
+</div>
+
+<audio #audio [src]="album.music">
+  <source [src]="album.music" type="audio/mpeg">
+</audio>

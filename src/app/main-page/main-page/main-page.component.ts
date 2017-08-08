@@ -4,7 +4,10 @@ import { MainPageService } from '../main-page.service'
 @Component({
   selector: 'm-main-page',
   templateUrl: './main-page.component.html',
-  styleUrls: ['./main-page.component.scss']
+  styleUrls: ['./main-page.component.scss'],
+  host: {
+    'style' : 'flex-grow: 1'
+  }
 })
 export class MainPageComponent implements OnInit {
 

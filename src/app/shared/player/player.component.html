@@ -1,7 +1,9 @@
 <div class="player-container">
-
+  <!-- 专辑图片 -->
+  <img class="album-pic" [src]="album.pic" [alt]="album.name">
   <!-- 进度条 -->
   <div class="progress-bar">
+    <!-- below：无法做到自动更新视图 -->
     <!-- <div class="duration-bar" [ngStyle]="{'width.%': (audio.currentTime/audio.duration)*100}"></div> -->
     <div class="duration-bar" [ngStyle]="{'width.%': mcl}"></div>
   </div>

@@ -1,4 +1,11 @@
 <div class="album-contianer">
-  <img [src]="album.pic" alt="">
-  {{album.name}}-{{album.author}}
+  <img [src]="album.pic" [alt]="album.name">
+  <div class="album-info">
+    <div>
+      {{album.name}}
+    </div>
+    <div class="album-author">
+      {{album.author}}
+    </div>
+  </div>
 </div>

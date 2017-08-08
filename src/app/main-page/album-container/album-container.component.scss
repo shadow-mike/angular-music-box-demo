@@ -1,3 +1,16 @@
 .album-container {
-    padding: 0 10px;
+  display: flex;
+  flex-grow: 1;
+  margin: 5px 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
+
+  .no-album {
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    color: #aaa;
+    text-align: center;
+  }
 }

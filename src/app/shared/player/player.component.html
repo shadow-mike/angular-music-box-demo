@@ -1,11 +1,22 @@
 <div class="player-container">
   <!-- 专辑图片 -->
-  <img class="album-pic" [src]="album.pic" [alt]="album.name">
+  <img
+    class="album-pic"
+    [src]="album.pic ? album.pic : 'http://s4.music.126.net/style/web2/img/default/default_album.jpg'"
+    [alt]="album.name">
   <!-- 进度条 -->
   <div class="progress-bar">
-    <!-- below：无法做到自动更新视图 -->
+    <!-- 歌名信息 -->
+    <span class="album-name" [title]="album.name">
+      {{album.name}}
+    </span>
+    <!-- below：无法做到及时自动更新视图 -->
     <!-- <div class="duration-bar" [ngStyle]="{'width.%': (audio.currentTime/audio.duration)*100}"></div> -->
     <div class="duration-bar" [ngStyle]="{'width.%': mcl}"></div>
+    <!-- 音乐时间 -->
+    <span class="music-time">
+      {{audio.currentTime | formatSeconds}}/{{audio.duration | formatSeconds}}
+    </span>
   </div>
   <!-- 播放按钮 -->
   <i #audioBtn

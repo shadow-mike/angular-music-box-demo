@@ -5,7 +5,8 @@ import { HttpModule }    from '@angular/http';
 
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { AlbumComponent } from './album/album.component';
-import { PlayerComponent } from './player/player.component'
+import { PlayerComponent } from './player/player.component';
+import { FormatSecondsPipe } from './pipes/format-seconds.pipe'
 
 @NgModule({
   imports: [
@@ -15,14 +16,16 @@ import { PlayerComponent } from './player/player.component'
   declarations: [
     SearchBarComponent,
     AlbumComponent,
-    PlayerComponent
+    PlayerComponent,
+    FormatSecondsPipe
   ],
   exports: [
     FormsModule,
     HttpModule,
     SearchBarComponent,
     AlbumComponent,
-    PlayerComponent
+    PlayerComponent,
+    FormatSecondsPipe
   ]
 })
 export class SharedModule { }

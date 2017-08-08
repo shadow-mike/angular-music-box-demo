@@ -6,7 +6,7 @@ import { MainPageService } from '../main-page.service'
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.scss'],
   host: {
-    'style' : 'flex-grow: 1'
+    'style' : `flex-grow: 1; display: flex;`
   }
 })
 export class MainPageComponent implements OnInit {

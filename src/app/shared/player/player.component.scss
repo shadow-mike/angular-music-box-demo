@@ -3,16 +3,26 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  box-shadow: 0px 3px 20px #666;
 
   .album-pic {
     width: 50px;
+  }
+
+  .album-name {
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .progress-bar {
     min-width: 100px;
     width: 60%;
     height: 5px;
-    background-color: #916281;
+    background-color: #efe;
     border-radius: 10px;
     position: relative;
   }
@@ -22,15 +32,22 @@
     background-color: #9ff281;
     border-radius: 10px;
     position: absolute;
-    // width: 20%;
     z-index: 1;
     top: 1px;
-    &:after {
-      content: '';
-      background-color: red;
-      width: 5px;
-      height: 5px;
-    }
+    // &:after {
+    //   content: '';
+    //   background-color: red;
+    //   width: 5px;
+    //   height: 5px;
+    // }
+  }
+
+  .music-time {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    font-size: 0.7em;
+    color: #aaa;
   }
 
   .audio-btn {

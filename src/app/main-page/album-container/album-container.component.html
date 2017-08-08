@@ -1,4 +1,7 @@
 <div class="album-container">
+  <div class="no-album" *ngIf="!albums.length">
+    探索音乐世界！
+  </div>
   <div *ngFor="let a of albums">
     <m-album [album]="a"></m-album>
   </div>

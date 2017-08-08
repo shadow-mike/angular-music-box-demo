@@ -23,6 +23,7 @@ export class PlayerComponent implements OnInit {
   ngOnInit() {
     this.album.music = 'http://m10.music.126.net/20170808110205/ea4709336046dd5c194bbb3c092046a1/ymusic/fc05/9501/db63/b0a3040b0f75e288bbb60cdc06cd2d0e.mp3';
     this.album.pic = "http://p1.music.126.net/Umm6zijgR6TO35X9nXkWcA==/2477199697381036.jpg?param=100x100";
+    this.album.name = "随便~\(≧▽≦)/~啦啦啦";
     this.renderer.listen(this.audioBtn.nativeElement, 'click', (event) => {
       console.log(this.audio)
       let audio = this.audio.nativeElement;

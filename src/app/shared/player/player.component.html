@@ -2,7 +2,7 @@
   <!-- 专辑图片 -->
   <img
     class="album-pic"
-    [src]="album.pic ? album.pic : 'http://s4.music.126.net/style/web2/img/default/default_album.jpg'"
+    [src]="album.pic ? album.pic : noMusicPic"
     [alt]="album.name">
   <!-- 进度条 -->
   <div class="progress-bar">
@@ -23,10 +23,10 @@
     class="fa audio-btn"
     [ngClass]="audio.paused ? 'fa-play' : 'fa-pause'"
     aria-hidden="true"
-    (click)="audio.paused ? audio.play() : audio.pause()">
+    (click)="(audio.paused && audio.currentSrc) ? audio.play() : audio.pause()">
   </i>
 </div>
 
-<audio #audio [src]="album.music">
-  <source [src]="album.music" type="audio/mpeg">
+<audio #audio [src]="album.music || ''">
+  <source [src]="album.music || ''" type="audio/mpeg">
 </audio>

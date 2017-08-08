@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Album } from '../../shared/class/album';
+import { GlobalService } from '../../global.service';
 
 @Component({
   selector: 'm-album-container',
@@ -12,9 +13,15 @@ import { Album } from '../../shared/class/album';
 export class AlbumContainerComponent implements OnInit {
 
   @Input() albums: Album[] = [];
-  constructor() { }
+  constructor(
+    public glbService: GlobalService
+  ) { }
 
   ngOnInit() {
+  }
+
+  setSingingMusic(a: Album) {
+    this.glbService.singingAlbum = a;
   }
 
 }

@@ -3,6 +3,6 @@
     探索音乐世界！
   </div>
   <div *ngFor="let a of albums">
-    <m-album [album]="a"></m-album>
+    <m-album [album]="a" (click)="setSingingMusic(a)"></m-album>
   </div>
 </div>

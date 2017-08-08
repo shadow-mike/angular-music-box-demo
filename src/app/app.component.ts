@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GlobalService } from './global.service';
 
 @Component({
   selector: 'music-box',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+
+  constructor(
+    public glbService: GlobalService
+  ) { }
 }

@@ -6,7 +6,8 @@ import { HttpModule }    from '@angular/http';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { AlbumComponent } from './album/album.component';
 import { PlayerComponent } from './player/player.component';
-import { FormatSecondsPipe } from './pipes/format-seconds.pipe'
+import { FormatSecondsPipe } from './pipes/format-seconds.pipe';
+import { LoadingDirective } from './directives/loading.directive'
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { FormatSecondsPipe } from './pipes/format-seconds.pipe'
     SearchBarComponent,
     AlbumComponent,
     PlayerComponent,
-    FormatSecondsPipe
+    FormatSecondsPipe,
+    LoadingDirective
   ],
   exports: [
     FormsModule,

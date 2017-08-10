@@ -21,3 +21,13 @@ npm install
 # serve with hot reload at localhost:4200
 npm start
 ```
+## Screenshot
+![](./static/screenshot-main-page-20170811.png)
+## TODO
+
+- 增加loading组件
+- 完善异常，报错等情况处理
+- 完善播放器
+- 增加播放列表
+- 实现播放量统计功能
+- ……

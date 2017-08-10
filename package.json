@@ -1,6 +1,8 @@
 {
   "name": "angular-music-box-demo",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "repository": "git@github.com:shadow512122313/angular-music-box-demo.git",
+  "author": "shadow512122313 <512122313@qq.com>",
   "license": "MIT",
   "scripts": {
     "ng": "ng",

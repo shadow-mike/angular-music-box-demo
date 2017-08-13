@@ -1,5 +1,7 @@
 <div class="app-container">
   <router-outlet class="router"></router-outlet>
-  <m-player [album]="glbService.singingAlbum"></m-player>
+  <m-player [album]="glbService.singingAlbum">
+    <m-play-list></m-play-list>
+  </m-player>
 </div>
 

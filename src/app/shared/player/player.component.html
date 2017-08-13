@@ -1,4 +1,12 @@
+<div class="nc-top" [@slideUpDown]="state">
+   <div class="nc-tip" (click)="slideToggle()">
+     <div></div>
+     <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
+    </div> 
+  <ng-content   ></ng-content>
+</div>
 <div class="player-container">
+
   <!-- 专辑图片 -->
   <img
     class="album-pic"

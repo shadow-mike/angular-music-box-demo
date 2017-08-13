@@ -1,0 +1,10 @@
+$g-color-blue: #01addf;
+$g-color-green: #6abb4f;
+$g-color-yellow: #fec524;
+$g-color-red: #f34833;
+$g-color-black: #1a1f22;
+$g-color-white: #fff;
+$g-color-grey: #aaa;
+
+$g-color-lightred: lighten($g-color-red, 10%);
+$g-color-darkred: darken($g-color-red, 10%);
